@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: url('https://source.unsplash.com/1600x900/?education,learning') no-repeat center center/cover;
+            padding: 100px 0;
+            color: white;
+            font-size: 2em;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .courses, .features, .about {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .course {
+            background: #ff6b81;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+            color: white;
+            font-weight: bold;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            background: url('https://source.unsplash.com/40x40/?icon') no-repeat left center;
+            background-size: contain;
+            padding-left: 50px;
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Welcome to the Online Learning Platform</h1>
+    </header>
+    <div class="container">
+        <section class="about">
+            <h2>About This Platform</h2>
+            <p>This platform provides video lessons, quizzes, and progress tracking for students. It supports media streaming, user authentication, and data storage.</p>
+        </section>
+        <section class="courses">
+            <h2>Courses</h2>
+            <div class="course">C++ Programming</div>
+            <div class="course">Python for Beginners</div>
+            <div class="course">Java Development</div>
+            <div class="course">Web Development with HTML & CSS</div>
+            <div class="course">C Fundamentals</div>
+        </section>
+        <section class="features">
+            <h2>Platform Features</h2>
+            <ul>
+                <li> High-quality video streaming</li>
+                <li> Secure user authentication</li>
+                <li> Track progress and achievements</li>
+                <li> Interactive quizzes and exercises</li>
+                <li> Cloud-based data storage</li>
+            </ul>
+        </section>
+    </div>
+    <script>
+        gsap.from(".fade-in", { duration: 1.5, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".course", { duration: 1, opacity: 0, y: 30, stagger: 0.3 });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: white;
+            text-align: center;
+        }
+        header {
+            padding: 50px 0;
+            background: #ff4b5c;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+        }
+        .projects, .skills {
+            background: #333;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+        .project {
+            background: #ff4b5c;
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">Welcome to My Portfolio</h1>
+    </header>
+    <div class="container">
+        <section class="about">
+            <h2>About Me</h2>
+            <p>I am a BE Computer Engineering student in my 3rd year at D Y Patil College. My areas of interest include full-stack development, artificial intelligence, and cybersecurity. I enjoy problem-solving and building scalable applications. Passionate about learning new technologies and improving efficiency through software solutions.</p>
+        </section>
+        <section class="projects">
+            <h2>Projects</h2>
+            <div class="project" id="project1">Full Stack Web Application - Developed a fully functional web application using MERN stack with authentication and real-time database updates.</div>
+            <div class="project" id="project2">AI/ML-Based Chatbot - Designed an AI-powered chatbot using Python and NLP techniques to provide automated responses for customer service.</div>
+            <div class="project" id="project3">Cybersecurity Threat Detection - Built an intrusion detection system using machine learning to analyze network traffic and detect anomalies.</div>
+        </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <p>Programming Languages: Python, Java, C++</p>
+            <p>Web Development: HTML, CSS, JavaScript, React, Node.js</p>
+            <p>AI/ML: TensorFlow, Scikit-Learn, NLP</p>
+            <p>Database Management: MySQL, MongoDB</p>
+            <p>Cybersecurity: Ethical Hacking, Network Security</p>
+        </section>
+    </div>
+    <script>
+        gsap.from(".fade-in", { duration: 1.5, opacity: 0, y: -50, ease: "power2.out" });
+        gsap.from(".project", { duration: 1, opacity: 0, y: 30, stagger: 0.3 });
+    </script>
+</body>
+</html>
